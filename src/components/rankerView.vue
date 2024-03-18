@@ -1,16 +1,19 @@
 <template>
-    <draggable v-model="tiers" @start="drag = true" @end="drag = false">
-        <TierRow v-for="(tier, i) in tiers" :key="i" :name="tier.name" :color="tier.color" :items="tier.items">
-        </TierRow>
+
+    <draggable v-model="tiers" group="testo" @start="drag = true" @end="drag = false" item-key="id">
+        <template #item="{ element }">
+            <div>{{ element.name }}</div>
+        </template>
     </draggable>
+
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 import TierRow from './tierRow.vue';
-import draggable from 'vuedraggable';
+import Draggable from 'vuedraggable';
 
-let drag : boolean = false; 
+let drag: boolean = false;
 
 const tiers = ref([
     { name: 'Bronze', sortValue: 100, color: "#f1c500", items: [{ id: 1, name: 'Bronze 1' }, { id: 2, name: 'Bronze 2' }, { id: 3, name: 'Bronze 3' }, { id: 4, name: 'Bronze 4' }, { id: 5, name: 'Bronze 5' }] },

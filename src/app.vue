@@ -1,15 +1,13 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router'
-import Ranker from './components/rankerView.vue'
-</script>
-
 <template>
-    <div class="wrapper">
-      <Ranker/>
-    </div>
-
   <RouterView />
 </template>
+
+
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+
+</script>
+
 
 <style scoped>
 .wrapper {
