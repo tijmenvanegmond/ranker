@@ -5,16 +5,13 @@
       <Ranker />
       <Ranker />
       <Ranker />
-      <Ranker3D />
-
-      <Box3D />
+      <Box3D :name="'TEST'"/>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import Ranker from './rankerView.vue'
-import Ranker3D from './rankerView3D.vue'
 import Box3D from './box3D.vue'
 </script>
 
