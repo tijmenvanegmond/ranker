@@ -1,8 +1,8 @@
 <template>
     <draggable v-model="tiers" group="testo" @start="onStartDrag()" @end="onEndDrag()" item-key="id">
-        <template #item="{ element }">
-            <tierRow :key="element.name" :name="element.name" :color="element.color" />
-        </template>
+         <template #item="{ element }">
+            <box3D :key="element.name" :name="element.name" :color="element.color" />
+        </template>/>
     </draggable>
 </template>
 
@@ -10,7 +10,7 @@
 import { ref } from 'vue';
 //import TierRow from './tierRow.vue';
 import Draggable from 'vuedraggable';
-import tierRow from './tierRow.vue';
+import box3D from './box3D.vue';
 
 const drag = ref(false);
 

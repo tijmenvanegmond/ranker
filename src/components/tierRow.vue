@@ -19,7 +19,6 @@ const colorStyle = () => {
 }
 
 onMounted(() => {
-    console.log(colorStyle());
 })
 
 </script>
