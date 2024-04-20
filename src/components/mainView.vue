@@ -2,10 +2,9 @@
   <div class="wrapper">
     <div class="row">
       <Ranker />
-      <Ranker />
-      <Ranker />
-      <Ranker />
-      <Box3D :name="'TEST'"/>
+      
+      <DragView />
+      <DragView />
     </div>
   </div>
 </template>
@@ -13,6 +12,7 @@
 <script lang="ts" setup>
 import Ranker from './rankerView.vue'
 import Box3D from './box3D.vue'
+import DragView from './dragView.vue';
 </script>
 
 <style scoped>
